@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Soultion_J_Be_2071_파스칼삼각형_정세린 {
+public class Solution_J_Be_2071_파스칼삼각형_정세린 {
 	static int n, m; // 높이 종류
 	static int[][] pascal;
 
@@ -16,6 +16,7 @@ public class Soultion_J_Be_2071_파스칼삼각형_정세린 {
 		n = Integer.parseInt(st.nextToken());
 		m = Integer.parseInt(st.nextToken());
 		pascal = new int[n][n];
+
 		for (int i = 0; i < n; i++) {
 			pascal[i][i] = 1;
 			pascal[i][0] = 1;
