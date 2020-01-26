@@ -25,7 +25,6 @@ public class Solution_J_Im_1809_탑_정세린 {
 					break;
 				}
 		}
-
 		for (int r : res)
 			System.out.print(r + " ");
 	}
