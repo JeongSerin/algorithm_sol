@@ -24,7 +24,7 @@ public class Solution_J_Be_1002_최대공약수최대공배수_정세린 {
 				least = num[i - 1] * num[i] / great;
 			} else if (i > 1) {
 				great = gcd(num[i], great);
-				least = least * num[i] / great;
+				least = least * num[i] / gcd(least, num[i]);
 			}
 		}
 		System.out.print(great + " " + least);
@@ -32,19 +32,16 @@ public class Solution_J_Be_1002_최대공약수최대공배수_정세린 {
 	}
 
 	public static int gcd(int a, int b) {
-		swap(a, b);
+		int tmp;
+		if (b > a) {
+			tmp = a;
+			a = b;
+			b = tmp;
+		}
 		if (b == 0)
 			return a;
 		else
 			return gcd(b, a % b);
 	}
 
-	public static void swap(int a, int b) {
-		int temp;
-		if (b > a) {
-			temp = a;
-			a = b;
-			b = temp;
-		}
-	}
 }
