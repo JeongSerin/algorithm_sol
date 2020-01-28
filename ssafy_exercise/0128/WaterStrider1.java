@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class WaterStrider {
+public class WaterStrider1 {
 	static boolean[][] visit;
 	static int res, N;
 	static boolean flag = false;
