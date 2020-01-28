@@ -9,7 +9,6 @@ import java.util.StringTokenizer;
 public class WaterStrider2 {
 	static boolean[][] visit;
 	static int die, N;
-	static boolean flag = false;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -32,7 +31,6 @@ public class WaterStrider2 {
 			}
 
 			die = 0;
-			flag = false;
 
 			// 처음위치 (행, 열), 1: 상, 2: 하, 3: 좌, 4: 우
 			for (int i = 0; i < wsnum; i++) {
