@@ -1,10 +1,8 @@
-package jungol;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Solution_J_Im_1328_빌딩_정세린 {
+public class Main_J_Im_1328_빌딩_정세린 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
