@@ -1,11 +1,9 @@
-package jungol;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_J_Be_1002_최대공약수최대공배수_정세린 {
+public class Main_J_Be_1002_최대공약수최대공배수_정세린 {
 	static int N;
 	static int[] num;
 
