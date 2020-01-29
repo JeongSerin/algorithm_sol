@@ -1,11 +1,9 @@
-package jungol;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_J_Be_1719_별삼각형2_정세린 {
+public class Main_J_Be_1719_별삼각형2_정세린 {
 	static int n, m; // 크기, 종류
 
 	public static void main(String[] args) throws IOException {
