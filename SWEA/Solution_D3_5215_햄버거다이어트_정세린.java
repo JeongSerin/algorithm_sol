@@ -20,7 +20,7 @@ public class Solution_D3_5215_햄버거다이어트_정세린 {
 			st = new StringTokenizer(br.readLine(), " ");
 			N = Integer.parseInt(st.nextToken());
 			L = Integer.parseInt(st.nextToken());
-			Ti = new int[N];
+			Ti = new int[N];    // material[N][2];
 			Ki = new int[N];
 			Tmax = 0;
 			
