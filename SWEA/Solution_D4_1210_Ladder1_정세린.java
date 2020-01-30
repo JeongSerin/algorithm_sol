@@ -12,7 +12,7 @@ public class Solution_D4_1210_Ladder1_정세린 {
 		StringTokenizer st = null;
 		int testNum;
 		int pos = 0;
-		int[][] ladder = new int[100][100];
+		int[][] ladder = new int[100][100]; // int[100][102] 로 좌우끝 예외처리
 		int X;
 		int y = 99;
 
@@ -24,7 +24,7 @@ public class Solution_D4_1210_Ladder1_정세린 {
 				st = new StringTokenizer(br.readLine());
 				for (int j = 0; j < 100; j++) {
 					ladder[i][j] = Integer.parseInt(st.nextToken());
-					if (i == 99 && ladder[i][j] == 2)
+					if (i == 99 && ladder[i][j] == 2)   // if (ladder[i][j] == 2)
 						pos = j;
 				}
 			}
