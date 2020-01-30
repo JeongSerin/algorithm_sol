@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+// 6^7  약 28만, 다 돌려봐도 됨
 public class Main_J_Be_1175_주사위던지기2_정세린 {
 	static int N, M;
 	static int[] numbers;
