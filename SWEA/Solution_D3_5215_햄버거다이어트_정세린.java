@@ -22,8 +22,8 @@ public class Solution_D3_5215_햄버거다이어트_정세린 {
 			L = Integer.parseInt(st.nextToken());
 			Ti = new int[N];
 			Ki = new int[N];
-
 			Tmax = 0;
+			
 			for (int n = 0; n < N; n++) {
 				st = new StringTokenizer(br.readLine(), " ");
 				Ti[n] = Integer.parseInt(st.nextToken());
