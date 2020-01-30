@@ -20,6 +20,7 @@ public class Main_J_Be_1175_주사위던지기2_정세린 {
 	}
 
 	private static void dice(int m, int index) {
+	    // 재귀 가지치기
 	    // if (m < 0) return;
 		if (index == N) {
 			if (m == 0) {
