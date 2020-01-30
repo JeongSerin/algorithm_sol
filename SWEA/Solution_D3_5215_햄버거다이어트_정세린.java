@@ -35,7 +35,7 @@ public class Solution_D3_5215_햄버거다이어트_정세린 {
 	}
 
 	private static void makeBurger(int index, int Tsum, int Ksum) {
-		if (Ksum > L)
+		if (Ksum >= L)
 			return;
 		if (index == N) {
 			Tmax = (Tsum > Tmax) ? Tsum : Tmax;
