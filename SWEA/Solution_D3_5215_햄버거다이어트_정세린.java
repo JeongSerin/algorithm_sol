@@ -1,49 +1,48 @@
-package swea;
+package com.ssafy.subset;
 
 import java.io.BufferedReader;
+//import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Solution_D3_5215_햄버거다이어트_정세린 {
-	static int N, L, max;
-	static int[] T, K;
+	static int N, L, Tmax;
+	static int[] Ti, Ki;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
+//		System.setIn(new FileInputStream("sample_input.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int tNum = Integer.parseInt(br.readLine());
+		int T = Integer.parseInt(br.readLine());
 		StringTokenizer st = null;
 
-		for (int tc = 0; tc < tNum; tc++) {
-			st = new StringTokenizer(br.readLine());
+		for (int tc = 0; tc < T; tc++) {
+			st = new StringTokenizer(br.readLine(), " ");
 			N = Integer.parseInt(st.nextToken());
 			L = Integer.parseInt(st.nextToken());
-			T = K = new int[N];
-			T = new int[N];
-			K = new int[N];
+			Ti = new int[N];
+			Ki = new int[N];
 
-			max = 0;
-			for (int i = 0; i < N; i++) {
-				st = new StringTokenizer(br.readLine());
-				T[i] = Integer.parseInt(st.nextToken());
-				K[i] = Integer.parseInt(st.nextToken());
+			Tmax = 0;
+			for (int n = 0; n < N; n++) {
+				st = new StringTokenizer(br.readLine(), " ");
+				Ti[n] = Integer.parseInt(st.nextToken());
+				Ki[n] = Integer.parseInt(st.nextToken());
 			}
-
-			dfs(0, 0, 0);
-
-			System.out.printf("#%d %d\n", tc + 1, max);
+			makeBurger(0, 0, 0);
+			System.out.printf("#%d %d\n", tc + 1, Tmax);
 		}
 	}
 
-	private static void dfs(int v, int tSum, int kSum) {
-		if (kSum > L)
+	private static void makeBurger(int index, int Tsum, int Ksum) {
+		if (Ksum > L)
 			return;
-		else if (v == N) {
-			if (max < tSum)
-				max = tSum;
+		if (index == N) {
+			Tmax = (Tsum > Tmax) ? Tsum : Tmax;
 			return;
 		}
-		dfs(v + 1, tSum + T[v], kSum + K[v]);
-		dfs(v + 1, tSum, kSum);
+		makeBurger(index + 1, Tsum + Ti[index], Ksum + Ki[index]);
+		makeBurger(index + 1, Tsum, Ksum);
 	}
+
 }
