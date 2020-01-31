@@ -72,6 +72,7 @@ public class JumpFourway {
 			jumping(i + len * dir[d][0], j + len * dir[d][1], cnt - 1);
 
 		} else {
+		    // 맵을 벗어나면
 			money = money - 1000; // 참가비 -1000
 			return;
 		}
