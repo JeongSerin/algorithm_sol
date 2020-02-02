@@ -1,5 +1,3 @@
-package jungol;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -25,7 +23,7 @@ public class Main_J_Im_1520_계단오르기_정세린 {
 		for (int[] m : memo) {
 			Arrays.fill(m, -1);
 		}
-		max = step(N, 0);
+		max = step(N, 1);
 		System.out.println(max);
 	}
 
