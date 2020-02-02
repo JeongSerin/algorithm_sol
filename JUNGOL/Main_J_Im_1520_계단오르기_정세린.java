@@ -11,17 +11,13 @@ public class Main_J_Im_1520_계단오르기_정세린 {
 	static int[][] memo;
 
 	public static void main(String[] args) throws IOException {
-		System.setIn(new FileInputStream("Main_J_Im_1520_계단오르기_정세린_input.txt"));
+// 		System.setIn(new FileInputStream("Main_J_Im_1520_계단오르기_정세린_input.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		N = Integer.parseInt(br.readLine());
 		stair = new int[N + 1];
 		memo = new int[N + 1][2];
 		for (int i = 1; i < N + 1; i++) {
 			stair[i] = Integer.parseInt(br.readLine());
-		}
-
-		for (int[] m : memo) {
-			Arrays.fill(m, -1);
 		}
 		max = step(N, 1);
 		System.out.println(max);
@@ -31,7 +27,7 @@ public class Main_J_Im_1520_계단오르기_정세린 {
 		if (index == 0 || index == 1) {
 			return memo[index][flag] = stair[index];
 		}
-		if (memo[index][flag] != -1)
+		if (memo[index][flag] != 0)
 			return memo[index][flag];
 		if (flag == 0) {
 			return memo[index][flag] = step(index - 2, 1) + stair[index];
