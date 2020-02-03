@@ -16,17 +16,34 @@ public class Main_J_Im_1077_배낭채우기1_정세린 {
 		Wi = new int[N];
 		Pi = new int[N];
 		bagP = new int[W + 1];
-		
+
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine());
 			Pi[i] = Integer.parseInt(st.nextToken());
 		}
 
-		for (int i = 0; i <= W; i++) {
-			for (int j = i + 1; j < N; j++) {
-				if (i < W) continue;
-				bagP[i] = bagP[i] + Pi[j];
-			}
+//		for (int i = 0; i <= W; i++) {
+//			for (int j = 0; j < N; j++) {
+//				if (Wsum > i) continue;
+//				if (Wsum <= i) {
+//					bagP[i] = bagP[i] + Pi[j];
+//					Wsum = Wsum + Wi[j];
+//				}
+//			}
+//		}
+		packing(0, W, 0);
+
+	}
+
+	private static void packing(int index, int weight, int Psum) {
+		if (index == N)
+			return;
+		if (weight < 0)
+			return;
+
+		for (int i = 0; i < N; i++) {
+			packing(index + 1, weight - Wi[index], Psum + Pi[i]);
+			packing(index + 1, weight, Psum);
 		}
 	}
 
