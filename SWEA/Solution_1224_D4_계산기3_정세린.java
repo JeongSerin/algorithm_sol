@@ -39,13 +39,13 @@ public class Solution_1224_D4_계산기3_정세린 {
 					st.push(tmp);
 				}
 			}
-			
-			while (!st.isEmpty()) sb.append(st.pop());
+
+			while (!st.isEmpty())
+				sb.append(st.pop());
 
 			res.append('#').append(tc).append(' ').append(calculate(sb)).append('\n');
 //			System.out.println(sb.toString());
 		}
-		
 		System.out.println(res.toString());
 	}
 
@@ -63,7 +63,6 @@ public class Solution_1224_D4_계산기3_정세린 {
 		case '/':
 			pri = 2;
 			break;
-
 		}
 		return pri;
 	}
@@ -82,7 +81,6 @@ public class Solution_1224_D4_계산기3_정세린 {
 		case '/':
 			pri = 2;
 			break;
-
 		}
 		return pri;
 	}
@@ -96,7 +94,6 @@ public class Solution_1224_D4_계산기3_정세린 {
 			tmp = str.charAt(i);
 			// 연산자면 팝하면서 계산
 			if (tmp == '+' || tmp == '*' || tmp == '/' || tmp == '-') {
-
 				b = calst.pop();
 				a = calst.pop();
 
@@ -114,15 +111,13 @@ public class Solution_1224_D4_계산기3_정세린 {
 					calst.push(a - b);
 					break;
 				}
-
 			}
 			// 연산자가 아니라 숫자
 			else {
 				calst.push(tmp - '0');
 			}
-
 		}
 		return calst.peek();
-
 	}
+
 }
