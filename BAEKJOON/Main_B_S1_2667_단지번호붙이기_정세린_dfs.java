@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.PriorityQueue;
@@ -29,17 +30,14 @@ public class Main_B_S1_2667_단지번호붙이기_정세린_dfs {
 
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
-				housecnt = 0;
 				if (!visited[i][j] && billage[i][j] > 0) {
+					housecnt = 0;
 					dfs(i, j);
-					if (housecnt > 0) {
-						housesQueue.offer(housecnt);
-
-					}
+					housesQueue.offer(housecnt);
 				}
-
 			}
 		}
+		
 		groupcnt = housesQueue.size();
 		while (!housesQueue.isEmpty())
 			sb.append(housesQueue.poll()).append('\n');
