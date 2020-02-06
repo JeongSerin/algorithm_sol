@@ -20,12 +20,14 @@ public class Solution_D4_5432_쇠막대기자르기 {
 			for(int i = 0; i < str.length(); i++) {
 				if (str.charAt(i) == '(')
 					st.push('(');
-				// 레이저
+				// 닫는괄호
 				else{
 					st.pop();
+					// 레이저면
 					if (str.charAt(i-1) == '(')
 				
 						ans += st.size();
+					// 레이저가 아니면	
 					else ans++;
 				}
 			}
