@@ -27,7 +27,6 @@ public class Main_B_S1_2447_별찍기10_정세린 {
 		// 중앙 공백
 		if (n == N / 3)
 			return (i >= n && i < n * 2 && j >= n && j < n * 2);
-		
 		// 그외 공백
 		return (i % (n * 3) >= n && i % (n * 3) < n * 2 && j % (n * 3) >= n && j % (n * 3) < n * 2)
 				| blank(i, j, n * 3);
