@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main_Im_1828_냉장고_정세린 {
+public class Main_J_Im_1828_냉장고_정세린 {
 	static int N, cnt = 1;
 	static int min = 100;
 
