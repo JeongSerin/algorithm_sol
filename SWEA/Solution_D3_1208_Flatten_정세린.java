@@ -19,8 +19,8 @@ public class Solution_D3_1208_Flatten_정세린 {
 			}
 			while (dump > 0) {
 				Arrays.sort(box);
-				box[0] +=1;
-				box[99] -= 1;
+				box[0]++;
+				box[99]--;
 				dump--;
 			}
 			Arrays.sort(box);
