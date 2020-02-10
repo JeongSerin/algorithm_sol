@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
@@ -11,7 +10,7 @@ public class Solution_D3_1873_상호의배틀필드_정세린 {
 	static int p, q; // 전차의 위치
 
 	public static void main(String[] args) throws IOException {
-		System.setIn(new FileInputStream("input.txt"));
+// 		System.setIn(new FileInputStream("input.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
 		StringTokenizer st;
