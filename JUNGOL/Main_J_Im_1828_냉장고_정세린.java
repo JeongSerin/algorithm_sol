@@ -30,7 +30,7 @@ public class Main_Im_1828_냉장고_정세린 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 //		System.setIn(new FileInputStream("input.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int start, end;
+		int end;
 		Queue<Point> queue = new PriorityQueue<Point>();
 
 		Point p;
@@ -43,7 +43,6 @@ public class Main_Im_1828_냉장고_정세린 {
 			queue.offer(p);
 		}
 		
-		start = queue.peek().x;
 		end = queue.poll().y;
 		
 		while (!queue.isEmpty()) {
@@ -51,7 +50,6 @@ public class Main_Im_1828_냉장고_정세린 {
 				end = Math.min(end, queue.poll().y);
 			} else {
 				cnt++;
-				start = queue.peek().x;
 				end = queue.poll().y;
 			}
 		}
