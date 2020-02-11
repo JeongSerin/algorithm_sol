@@ -47,7 +47,7 @@ public class Main_Im_1828_냉장고_정세린 {
 		end = queue.poll().y;
 		
 		while (!queue.isEmpty()) {
-			if (queue.peek().x >= start && queue.peek().x <= end) {
+			if (queue.peek().x <= end) {
 				end = Math.min(end, queue.poll().y);
 			} else {
 				cnt++;
