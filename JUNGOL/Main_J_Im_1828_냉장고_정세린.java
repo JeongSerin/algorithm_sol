@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main_J_Im_1828_냉장고_정세린 {
+public class Main_Im_1828_냉장고_정세린 {
 	static int N, cnt = 1;
 	static int min = 100;
 
@@ -13,7 +13,10 @@ public class Main_J_Im_1828_냉장고_정세린 {
 		int x;
 		int y;
 
-		Point() {
+		public Point(int x, int y) {
+			super();
+			this.x = x;
+			this.y = y;
 		}
 
 		@Override
@@ -35,15 +38,14 @@ public class Main_J_Im_1828_냉장고_정세린 {
 		StringTokenizer st;
 
 		for (int i = 0; i < N; i++) {
-			p = new Point();
 			st = new StringTokenizer(br.readLine(), " ");
-			p.x = Integer.parseInt(st.nextToken());
-			p.y = Integer.parseInt(st.nextToken());
+			p = new Point(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));
 			queue.offer(p);
 		}
-
+		
 		start = queue.peek().x;
 		end = queue.poll().y;
+		
 		while (!queue.isEmpty()) {
 			if (queue.peek().x >= start && queue.peek().x <= end) {
 				end = Math.min(end, queue.poll().y);
