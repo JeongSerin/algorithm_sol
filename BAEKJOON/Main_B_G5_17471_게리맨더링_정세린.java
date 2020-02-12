@@ -33,7 +33,7 @@ public class Main_B_G5_17471_게리맨더링_정세린 {
 			num[n] = Integer.parseInt(st.nextToken());
 			total += num[n];
 		}
-
+        // 인접행렬
 		for (int i = 1; i <= N; i++) {
 			st = new StringTokenizer(br.readLine());
 			int jj = Integer.parseInt(st.nextToken());
