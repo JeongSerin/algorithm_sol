@@ -14,12 +14,22 @@ public class CompareTest {
 			this.a = a;
 			this.b = b;
 		}
-
+		
+		// 2순위 비교
 		@Override
 		public int compareTo(AA o) {
 			Integer a1 = this.a;
 			Integer a2 = o.a;
+			if (a1.compareTo(a2) == 0) {
+				Integer b1 = this.b;
+				Integer b2 = o.b;
+				return b1.compareTo(b2);
+			}
 			return a1.compareTo(a2);
+		}
+		@Override
+		public String toString() {
+			return "(" + this.a + " " + this.b + ")"+ " ";
 		}
 	}
 
@@ -35,17 +45,30 @@ public class CompareTest {
 				return x1.compareTo(x2);
 			}
 		});
-		System.out.println(p[0].x + " " + p[0].y);
-		System.out.println(p[1].x + " " + p[1].y);
+		for (Point pp : p) {
+			System.out.print("("+pp.x + " " + pp.y + ")" + " ");
+		}
 
 		
 		System.out.println();
-		AA[] a = new AA[2];
-		a[0] = new AA(3, 1);
+		AA[] a = new AA[3];
+		a[0] = new AA(3, 6);
 		a[1] = new AA(2, 4);
+		a[2] = new AA(3, 1);
 		Arrays.sort(a);
-		System.out.println(a[0].a + " " + a[0].b);
-		System.out.println(a[1].a + " " + a[1].b);
+		for (AA aa : a) {
+			System.out.print(aa.toString());
+		}
+		
+		Integer[] arr = new Integer[] {1, 8, 5, 6, 4};
+		Arrays.sort(arr, new Comparator<Integer>() {
+			@Override
+			public int compare(Integer o1, Integer o2) {
+				return o2.compareTo(o1);
+			}
+		});
+		System.out.println();
+		System.out.println(Arrays.toString(arr));
 	}
 
 }
