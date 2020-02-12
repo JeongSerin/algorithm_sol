@@ -1,5 +1,5 @@
-/*13524KB
- * 80ms*/
+/* 13524KB
+ * 80ms */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -33,7 +33,7 @@ public class Main_B_G5_17471_게리맨더링_정세린 {
 			num[n] = Integer.parseInt(st.nextToken());
 			total += num[n];
 		}
-        // 인접행렬
+		// 인접 행렬
 		for (int i = 1; i <= N; i++) {
 			st = new StringTokenizer(br.readLine());
 			int jj = Integer.parseInt(st.nextToken());
@@ -42,7 +42,7 @@ public class Main_B_G5_17471_게리맨더링_정세린 {
 				adj[i][jtmp] = true;
 			}
 		}
-
+		
 		L: for (int i = 1; i < (1 << (N - 1)); i++) {
 			// 새로 조합 만들면 visited, subsum초기화
 			subsum0 = 0;
@@ -57,23 +57,21 @@ public class Main_B_G5_17471_게리맨더링_정세린 {
 			// 각 구역 탐색
 			dfs(reg0, 0);
 			dfs(reg1, 1);
-
+			
 			// visit확인 미방문 발견되면 다시 조합 만듦
 			for (int j = 1; j < N + 1; j++) {
 				if (!visited[j]) {
 					continue L;
 				}
 			}
-
-			// 구역 나누기 성공하면 각 구역합 구함
+			
+			// 구역 나누기 성공하면 각 구역합, 구역간 인구수 차이구함
 			for (int k = 1; k < N + 1; k++) {
 				if (region[k] == 0) {
 					subsum0 += num[k];
 				}
 			}
 			subsum1 = total - subsum0;
-
-			// 구역 차이 구함
 			diff = Math.abs(subsum0 - subsum1);
 			min = Math.min(min, diff);
 
