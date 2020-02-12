@@ -61,13 +61,11 @@ public class Main_B_G5_17471_게리맨더링_정세린 {
 			// visit확인 미방문 발견되면 다시 조합 만듦
 			for (int j = 1; j < N + 1; j++) {
 				if (!visited[j]) continue L;
-				
 			}
 			
 			// 구역 나누기 성공하면 각 구역합, 구역간 인구수 차이구함
 			for (int k = 1; k < N + 1; k++) {
 				if (region[k] == 0) subsum0 += num[k];
-				
 			}
 			subsum1 = total - subsum0;
 			diff = Math.abs(subsum0 - subsum1);
