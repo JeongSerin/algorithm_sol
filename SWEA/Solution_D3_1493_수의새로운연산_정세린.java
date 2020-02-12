@@ -35,7 +35,6 @@ public class Solution_D3_1493_수의새로운연산_정세린 {
 			}
 
 			while (true) {
-
 				if (num == num1) {
 					pos1[0] = i;
 					pos1[1] = j;
