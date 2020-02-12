@@ -66,7 +66,9 @@ public class CompareTest {
 		});
 		System.out.println();
 		System.out.println(Arrays.toString(arr));
-
+		
+		System.out.println((double)5/2);
+		System.out.println((double)(5/2));
 	}
 
 }
