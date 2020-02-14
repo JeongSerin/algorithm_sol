@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main_B_S1_7576_토마토 {
+public class Main_B_S1_7576_토마토_정세린 {
 	static class Point {
 		int i;
 		int j;
