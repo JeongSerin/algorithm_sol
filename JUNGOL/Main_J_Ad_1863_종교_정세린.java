@@ -41,11 +41,10 @@ public class Main_J_Ad_1863_종교_정세린 {
 			int b = Integer.parseInt(st.nextToken());
 			unionSet(a, b);
 		}
-		 Arrays.sort(parents);
-		 
-		 for (int i = 1; i <= N; i++) {
-			 if (parents[i] == -1) cnt++;
-		 }
+
+		for (int i = 1; i <= N; i++) {
+			if (parents[i] == -1) cnt++;
+		}
 		 System.out.println(cnt);
 		
 	}
