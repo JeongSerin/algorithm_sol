@@ -14,7 +14,6 @@ public class Main_B_G2_3109_빵집_정세린 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-		String str;
 		R = Integer.parseInt(st.nextToken());
 		C = Integer.parseInt(st.nextToken());
 		visited = new boolean[R][C];
@@ -22,8 +21,7 @@ public class Main_B_G2_3109_빵집_정세린 {
 		
 		
 		for(int i = 0; i < R; i++) {
-			str = (br.readLine());
-			map[i] = str.toCharArray();
+			map[i] = br.readLine().toCharArray();
 		}
 		
 		for (int i = 0; i < R; i++) {
