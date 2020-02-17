@@ -2,23 +2,14 @@
  *45,564 kb
  *167 ms
  */
+import java.awt.Point;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class Solution_D4_1249_보급로_정세린 {
-
-	static class Point {
-		int i, j;
-
-		Point(int i, int j) {
-			this.i = i;
-			this.j = j;
-		}
-	}
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -33,17 +24,15 @@ public class Solution_D4_1249_보급로_정세린 {
 			N = Integer.parseInt(br.readLine());
 			map = new int[N][N];
 			memo = new int[N][N];
-			max = 0;
+			max = N * N * 9;
 
 			for (int i = 0; i < N; i++) {
 				str = br.readLine();
 				for (int j = 0; j < N; j++) {
 					map[i][j] = str.charAt(j) - '0';
-					max += map[i][j];
+					memo[i][j] = max;
 				}
 			}
-			for (int[] m : memo)
-				Arrays.fill(m, max);
 
 			Queue<Point> queue = new LinkedList<Point>();
 			queue.offer(new Point(0, 0));
@@ -53,11 +42,11 @@ public class Solution_D4_1249_보급로_정세린 {
 			while (!queue.isEmpty()) {
 				current = queue.poll();
 				for (int dir = 0; dir < 4; dir++) {
-					int itmp = current.i + dh[dir][0];
-					int jtmp = current.j + dh[dir][1];
+					int itmp = current.x + dh[dir][0];
+					int jtmp = current.y + dh[dir][1];
 					if (itmp >= 0 && itmp < N && jtmp >= 0 && jtmp < N) {
-						if (memo[current.i][current.j] + map[itmp][jtmp] < memo[itmp][jtmp]) {
-							memo[itmp][jtmp] = memo[current.i][current.j] + map[itmp][jtmp];
+						if (memo[current.x][current.y] + map[itmp][jtmp] < memo[itmp][jtmp]) {
+							memo[itmp][jtmp] = memo[current.x][current.y] + map[itmp][jtmp];
 							queue.offer(new Point(itmp, jtmp));
 						}
 					}
@@ -65,7 +54,7 @@ public class Solution_D4_1249_보급로_정세린 {
 			}
 			sb.append("#" + tc + " " + memo[N - 1][N - 1] + "\n");
 		}
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 
 }
