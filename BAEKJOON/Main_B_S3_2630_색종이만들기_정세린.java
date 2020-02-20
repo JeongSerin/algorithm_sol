@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_B_S3_2630_색종이_정세린 {
+public class Main_B_S3_2630_색종이만들기_정세린 {
 	static int[][] paper;
 	static int blue = 0, white = 0;
 	
