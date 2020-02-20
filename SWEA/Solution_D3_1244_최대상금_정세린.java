@@ -11,7 +11,6 @@ public class Solution_D3_1244_최대상금_정세린 {
 	static int max;
 	static char[] card;
 	static int change;
-	static String str;
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
