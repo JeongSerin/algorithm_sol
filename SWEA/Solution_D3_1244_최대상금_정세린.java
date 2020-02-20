@@ -1,6 +1,6 @@
 /*
- * 107,556 kb
- * 713 ms
+ * 87,616 kb
+ * 613 ms
  */
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -35,7 +35,6 @@ public class Solution_D3_1244_최대상금_정세린 {
 	
 	private static void permutation(int index, int num) {
 		if (num == change) {
-			str = String.valueOf(card);
 			max = Math.max(max, Integer.parseInt(String.valueOf(card)));
 			return;
 		}
