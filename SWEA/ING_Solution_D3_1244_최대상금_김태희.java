@@ -1,4 +1,4 @@
-﻿import java.util.HashSet;
+import java.util.HashSet;
 import java.util.Scanner;
 /**
  * 메모리 41,448 kb
