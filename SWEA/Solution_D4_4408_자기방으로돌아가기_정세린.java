@@ -8,7 +8,6 @@ import java.util.StringTokenizer;
 public class Solution_D4_4408_자기방으로돌아가기_정세린 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		System.setIn(new FileInputStream("sample_input.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
 		int N;
