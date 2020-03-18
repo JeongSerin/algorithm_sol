@@ -1,23 +1,13 @@
-package Baekjoon;
-
+/*
+ * 13520KB
+ * 72ms
+ */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main_B_G5_5569_출근경로_정세린 {
-	
-	static class Point{
-		int x;
-		int y;
-		
-		Point(int x, int y){
-			this.x = x;
-			this.y = y;
-		}
-	}
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
