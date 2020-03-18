@@ -1,4 +1,3 @@
-package Baekjoon;
 /*
  * 12972KB
  * 76ms
@@ -68,7 +67,7 @@ public class Main_B_G5_11559_PuyoPuyo {
 				}
 			}
 
-			// 지울 수 있는 것이 아무것도 없다면 break;
+			// 지운 것이 아무것도 없다면 break;
 			if (!flag) break;
 			
 			// 지운것이 있다면 totalCnt++
