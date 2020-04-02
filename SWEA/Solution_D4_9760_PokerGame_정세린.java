@@ -1,4 +1,5 @@
 package swea;
+
 /*
  * 20,792 kb
  * 103 ms
@@ -17,6 +18,7 @@ public class Solution_D4_9760_PokerGame_정세린 {
 	static boolean triple = false;
 	static boolean fourCard = false;	
 	static boolean straight = false;
+	static boolean straightFlag = false;
 	static boolean flush = false;
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
@@ -33,6 +35,7 @@ public class Solution_D4_9760_PokerGame_정세린 {
 			triple = false;
 			fourCard = false;	
 			straight = false;
+			straightFlag = false;
 			flush = false;
 			
 			for (int i = 0; i < 5; i++) {
@@ -59,7 +62,7 @@ public class Solution_D4_9760_PokerGame_정세린 {
 				}
 			}
 			
-			flush = flush();	// 플러쉬 확인
+			flush();	// 플러쉬 확인
 			pair();				// 페어 & 스트레이트 확인 
 			
 			sb.append("#" + tc + " ");
@@ -79,14 +82,14 @@ public class Solution_D4_9760_PokerGame_정세린 {
 	
 	private static boolean flush() {	// 모두 동일 슈트
 		for (int sNum: suit) {
-			if (sNum == 5) return true;
+			if (sNum == 5) return flush = true;
 		}
-		return false;
+		return flush = false;
 	}
 	
 	private static void pair() {
 		for (int i = 0; i < rank.length; i++) {
-			if(!straight && i <= rank.length - 5 && rank[i] == 1) if (straight(i)) return;	// 스트레이트 확인
+			if(!straightFlag && i <= rank.length - 5 && rank[i] == 1) if (straight(i)) return;	// 스트레이트 확인
 			if(rank[i] == 2) pair++;	// 한쌍 있으면 페어 개수+1
 			if(rank[i] == 3) triple = true;	// 트리플
 			if(rank[i] == 4) {fourCard = true; return;}	// 포카드면 
@@ -94,6 +97,7 @@ public class Solution_D4_9760_PokerGame_정세린 {
 	}
 	
 	private static boolean straight(int idx) {
+		straightFlag = true;
 		if (idx == 0 && rank[rank.length-1] == 1) {	// 2, 3, 4, 5, A
 			for (int i = idx; i < idx + 4; i++) {
 				if (rank[i] != 1) return false;
