@@ -21,7 +21,7 @@ public class Solution_D4_6719_성수의프로그래밍강좌시청_정세린 {
 		StringTokenizer st = null;
 		int N;			// 전체 강좌 수
 		int K;			// 들을 강좌 수
-		float A = 0;	// 성수의 실력
+		double A = 0;	// 성수의 실력
 		
 		StringBuilder sb = new StringBuilder();
 		Queue<Integer> q = new PriorityQueue<Integer>(new Comparator<Integer>() {
