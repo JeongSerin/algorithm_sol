@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main_B_G5_11559_PuyoPuyo {
+public class Main_B_G5_11559_PuyoPuyo_정세린 {
 
 	static Queue<Integer> q = new LinkedList<Integer>();
 	static char[][] map = new char[12][6];
