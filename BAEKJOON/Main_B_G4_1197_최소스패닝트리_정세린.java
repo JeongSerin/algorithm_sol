@@ -1,3 +1,8 @@
+/*
+ * 47884KB
+ * 436ms
+ */
+
 package Baekjoon;
 
 import java.io.BufferedReader;
@@ -31,7 +36,6 @@ public class Main_B_G4_1197_최소스패닝트리_정세린 {
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		V = Integer.parseInt(st.nextToken());
 		E = Integer.parseInt(st.nextToken());
