@@ -21,18 +21,18 @@ public class Solution_D4_1251_하나로_정세린 {
 	static int[] ypos;
 	static double E;	// 세율
 	static double res;
-	static PriorityQueue<Weight> pq = new PriorityQueue<Weight>(new Comparator<Weight>() {
+	static PriorityQueue<Edge> pq = new PriorityQueue<Edge>(new Comparator<Edge>() {
 		@Override
-		public int compare(Weight o1, Weight o2) {
+		public int compare(Edge o1, Edge o2) {
 			return Long.compare(o1.distance, o2.distance);
 		}
 	});
 	
-	static class Weight{
+	static class Edge{
 		int a, b;
 		long distance;
 		
-		Weight(int a, int b){
+		Edge(int a, int b){
 			this.a = a;
 			this.b = b;
 			long distance = (long)(xpos[a] - xpos[b]) * (long)(xpos[a] - xpos[b])
@@ -68,13 +68,13 @@ public class Solution_D4_1251_하나로_정세린 {
 			
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
-					pq.offer(new Weight(i, j));
+					pq.offer(new Edge(i, j));
 				}
 			}
 			
 			int cnt = 0;
 			while (cnt < N - 1) {
-				Weight cur = pq.poll();
+				Edge cur = pq.poll();
 				if (union(cur.a, cur.b)){ // 유니온 성공시 
 					res += cur.distance;
 					cnt++;
