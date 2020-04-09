@@ -1,3 +1,8 @@
+/*
+ * 113,032 kb
+ * 373 ms
+ */
+
 package swea;
 
 import java.io.BufferedReader;
@@ -80,7 +85,6 @@ public class Solution_D4_1251_하나로_정세린 {
 			res = res * E;
 			sb.append("#" + tc + " " + Math.round(res) + "\n");
 		}
-		
 		System.out.println(sb);
 	}
 	
