@@ -21,7 +21,6 @@ public class Solution_D4_1251_하나로_정세린 {
 	static int[] ypos;
 	static double E;	// 세율
 	static double res;
-	static Weight[] weight;
 	static PriorityQueue<Weight> pq = new PriorityQueue<Weight>(new Comparator<Weight>() {
 		@Override
 		public int compare(Weight o1, Weight o2) {
