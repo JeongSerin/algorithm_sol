@@ -1,29 +1,25 @@
+/*
+ * 107,612kb
+ * 634ms
+ */
+
 package swea;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class Solution_D4_4050_재관이의대량할인_pq {
+public class Solution_D4_4050_재관이의대량할인 {
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
 		int N;
 		int[] items;
-		PriorityQueue<Integer> q = new PriorityQueue<Integer>(new Comparator<Integer>() {
-			
-			@Override
-			public int compare(Integer o1, Integer o2) {
-				return o2 - o1;
-			}
-			
-		});
-
-		
 		StringBuilder sb = new StringBuilder();
 		
 		for (int tc = 1; tc <= T; tc++) {
@@ -33,20 +29,14 @@ public class Solution_D4_4050_재관이의대량할인_pq {
 			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 			
 			for (int i = 0; i < N; i++) {
-				q.offer(Integer.parseInt(st.nextToken()));
+				items[i] = Integer.parseInt(st.nextToken());
+				max += items[i];
 			}
+			Arrays.sort(items);
 			
-			while (q.size() >= 3) {
-				max += q.poll();
-				max += q.poll();
-				q.poll();
-				
+			for (int i = N-3; i >= 0;  i -= 3) {
+				max -= items[i];
 			}
-			
-			while (!q.isEmpty()) {
-				max += q.poll(); 
-			}
-			
 			
 			sb.append("#" + tc + " " + max + "\n");
 		}
