@@ -9,7 +9,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main_B_G3_부분문자열_정세린 {
+public class Main_B_G5_16916_부분문자열_정세린 {
 	
 	static int[] getPi(String pattern) {
 		int[] pi = new int[pattern.length()];
