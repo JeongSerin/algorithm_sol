@@ -1,4 +1,7 @@
-package Baekjoon;
+/*
+ * 55284kb
+ * 460ms
+ */
 
 import java.io.BufferedReader;
 import java.io.IOException;
