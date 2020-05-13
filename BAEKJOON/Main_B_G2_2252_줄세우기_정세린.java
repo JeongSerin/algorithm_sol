@@ -43,20 +43,16 @@ public class Main_B_G2_2252_줄세우기_정세린 {
 		}
 		
 		for (int i = 1; i <= V; i++) {
-			// 사이클
-			
-			if (q.isEmpty()) break;
+			if (q.isEmpty()) break; // 사이클
 
 			int cur = q.poll();
 			sb.append(cur + " ");
 
-			
 			for (int j = 0; j < edge.get(cur).size(); j++) { // 현재 정점과 연결된 간선들
 				// 간선 확인
 				int to = edge.get(cur).get(j);
 				// 진입 차수가 하나 줄음
 				inDgree[to]--;
-				
 				// 진입차수가 0 이면 push 
 				if (inDgree[to] == 0) q.offer(to);
 			}
