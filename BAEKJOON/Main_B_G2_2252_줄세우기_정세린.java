@@ -2,6 +2,7 @@
  * 55284kb
  * 460ms
  */
+package BAEKJOON;
 
 import java.io.BufferedReader;
 import java.io.IOException;

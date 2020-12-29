@@ -2,6 +2,8 @@
  *45,564 kb
  *167 ms
  */
+package SWEA;
+
 import java.awt.Point;
 import java.io.BufferedReader;
 import java.io.IOException;

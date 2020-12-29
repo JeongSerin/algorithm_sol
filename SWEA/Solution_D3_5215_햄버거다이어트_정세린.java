@@ -1,4 +1,4 @@
-package com.ssafy.subset;
+package SWEA;
 
 import java.io.BufferedReader;
 //import java.io.FileInputStream;

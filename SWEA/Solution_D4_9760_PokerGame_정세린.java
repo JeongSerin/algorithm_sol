@@ -1,9 +1,9 @@
-package swea;
-
 /*
  * 20,792 kb
  * 103 ms
  */
+
+package SWEA;
 
 import java.io.BufferedReader;
 import java.io.IOException;

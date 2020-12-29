@@ -2,6 +2,8 @@
  * 92,572kb
  * 2,197ms
  */
+package SWEA;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,7 +14,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.StringTokenizer;
  
-public class Solution {
+public class Solution_D4_5643_키순서_정세린_dfs {
     static boolean[][] adj;
     static boolean[] visited;
     static int V, E, cnt;

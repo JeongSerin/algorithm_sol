@@ -1,9 +1,11 @@
+package SWEA;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_D3_1244_최대상금_정세린_memo {
+public class ING_Solution_D3_1244_최대상금_정세린_memo {
 	static int max;
 	static char[] card;
 	static int change;

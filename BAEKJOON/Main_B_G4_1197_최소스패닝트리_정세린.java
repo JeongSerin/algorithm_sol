@@ -3,7 +3,7 @@
  * 436ms
  */
 
-package Baekjoon;
+package BAEKJOON;
 
 import java.io.BufferedReader;
 import java.io.IOException;

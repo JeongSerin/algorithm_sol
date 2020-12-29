@@ -1,11 +1,11 @@
-package jungol;
+package JUNGOL;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_J_Im_1382_동전바꿔주기_정세린 {
+public class ING_Main_J_Im_1382_동전바꿔주기_정세린 {
 	static int T, k;
 	static int[] p, n;
 	static int cnt = 0, sum = 0;

@@ -1,8 +1,10 @@
+package JUNGOL;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Solution_J_Be_2074_홀수마방진_정세린 {
+public class Main_J_Be_2074_홀수마방진_정세린 {
 	static int i, j, N, num = 1;
 	static int[][] map;
 

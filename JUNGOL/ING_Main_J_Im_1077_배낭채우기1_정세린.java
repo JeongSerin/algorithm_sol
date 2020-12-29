@@ -1,9 +1,11 @@
+package JUNGOL;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_J_Im_1077_배낭채우기1_정세린 {
+public class ING_Main_J_Im_1077_배낭채우기1_정세린 {
 	static int N, W;
 	static int[] Wi, Pi, bagW, bagP;
 	static int[] memo;

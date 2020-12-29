@@ -2,6 +2,8 @@
  * 143708 KB
  * 380 ms
  */
+package BAEKJOON;
+
 import java.awt.Point;
 import java.io.BufferedReader;
 import java.io.IOException;

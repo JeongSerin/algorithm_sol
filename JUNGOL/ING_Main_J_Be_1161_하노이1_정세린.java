@@ -1,8 +1,10 @@
+package JUNGOL;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main_J_Be_1161_하노이1_정세린 {
+public class ING_Main_J_Be_1161_하노이1_정세린 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

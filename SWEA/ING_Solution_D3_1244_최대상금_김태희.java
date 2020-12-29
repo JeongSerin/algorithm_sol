@@ -1,3 +1,5 @@
+package SWEA;
+
 import java.util.HashSet;
 import java.util.Scanner;
 /**
@@ -5,7 +7,7 @@ import java.util.Scanner;
  * 실행시간 180 ms
  * 코드길이 1,167
  */
-public class Solution_D3_1244_최대상금_김태희 {
+public class ING_Solution_D3_1244_최대상금_김태희 {
 	private static int max,num[];
 	private static HashSet<String> s = new HashSet<String>();
 	public static void main(String[] args) {
