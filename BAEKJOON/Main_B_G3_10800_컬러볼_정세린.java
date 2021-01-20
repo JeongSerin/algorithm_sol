@@ -5,7 +5,6 @@
  1) 공 사이즈 오름차순 정렬
  2) 이전 공들까지의 전체합-이전 공들 중 같은 컬러 공의 합
 */
-
 package BAEKJOON;
 
 import java.io.BufferedReader;
