@@ -1,6 +1,6 @@
 /*
- * 117960KB
- * 868ms
+ * 118824KB
+ * 816ms
  * 1H
  * bfs
  * 1. 상근이 bfs로 이동
@@ -54,7 +54,6 @@ public class Main_B_G4_5427_불_정세린 {
 			}	// end of input
 			
 			boolean escape = false;	// 탈출 여부
-			// 상근이가 이동할 수 있는 곳
 			L:while(!man.isEmpty()) {	// 상민이가 살아있는동안
 				// 상근이가 이동함 bfs
 				int sizem = man.size();
@@ -75,19 +74,17 @@ public class Main_B_G4_5427_불_정세린 {
 				}
 				
 				// 불이 번짐
-				if (!fire.isEmpty()) {
-					int sizef = fire.size();
-					while (sizef-- > 0) {
-						Point curf = fire.poll();
-					
-						for (int d = 0; d < 4; d++) {
-							int ni = curf.i + dh[d][0];
-							int nj = curf.j + dh[d][1];
-							if (ni < 0 || ni >= h || nj < 0 || nj >= w) continue;
-							if (map[ni][nj] == '.' || map[ni][nj] == '@') {	// 불이 번질 수 있다면
-								fire.offer(new Point(ni, nj));
-								map[ni][nj] = '*';	// 불이 옮겨붙음
-							}
+				int sizef = fire.size();
+				while (sizef-- > 0) {
+					Point curf = fire.poll();
+				
+					for (int d = 0; d < 4; d++) {
+						int ni = curf.i + dh[d][0];
+						int nj = curf.j + dh[d][1];
+						if (ni < 0 || ni >= h || nj < 0 || nj >= w) continue;
+						if (map[ni][nj] == '.' || map[ni][nj] == '@') {	// 불이 번질 수 있다면
+							fire.offer(new Point(ni, nj));
+							map[ni][nj] = '*';	// 불이 옮겨붙음
 						}
 					}
 				}
