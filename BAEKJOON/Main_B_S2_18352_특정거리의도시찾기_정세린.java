@@ -2,6 +2,7 @@
  * 349532KB
  * 1480ms
  * 2H 30m
+ * 다익스트라
  */
 package BAEKJOON;
 
@@ -30,6 +31,8 @@ public class Main_B_S2_18352_특정거리의도시찾기_정세린 {
 			this.idx = idx;
 		}
 	}
+	
+	// 거리와 정점 인덱스를 저장하는 pq
 	static Queue<DistInfo> pq = new PriorityQueue<DistInfo>(new Comparator<DistInfo>() {
 		@Override
 		public int compare(DistInfo o1, DistInfo o2) {
@@ -58,7 +61,7 @@ public class Main_B_S2_18352_특정거리의도시찾기_정세린 {
 			road.get(start).add(end);
 		}	// end of input
 		
-		dijkstra(X);
+		dijkstra(X);	// 시작 위치부터 다익스트라
 		
 		boolean exist = false;
 		for (int i = 1; i <= N; i++) {
@@ -73,20 +76,20 @@ public class Main_B_S2_18352_특정거리의도시찾기_정세린 {
 	}
 	
 	static void dijkstra(int start) {
-		Arrays.fill(dist, INF);
+		Arrays.fill(dist, INF);	// 최고 거리 넣어두고 시작
 		for (int i = 0; i < road.get(start).size(); i++) {
 			int end = road.get(start).get(i);
-			dist[end] = 1;
-			pq.offer(new DistInfo(1, end));
+			dist[end] = 1;	// 시작점 -> 바로연결된 정점 까지의 거리는 1임.
+			pq.offer(new DistInfo(1, end));	// 연결된 정점들을 큐에 넣음
 		}
 		
 		for (int i = 1; i <= N - 2; i++) {	
 			if (pq.isEmpty()) break;
-			int cur = pq.poll().idx;
+			int cur = pq.poll().idx;	// 가장 가까운 정점 선택. (pq이용)
 			
 			for (int j = 0; j < road.get(cur).size(); j++) {
 				int end = road.get(cur).get(j);
-				if (dist[cur] + 1 < dist[end]) {
+				if (dist[cur] + 1 < dist[end]) {	// 출발지~현재 + 현재~도착지 < 출발지~도착지
 					dist[end] = dist[cur] + 1;
 					pq.offer(new DistInfo(dist[end], end));
 				}
