@@ -76,7 +76,7 @@ public class Main_B_G4_1922_네트워크연결 {
 	}
 	
 	static int findSet(int a) {
-		if (parents[a] < 0) return a;	// 부모 노드라면 부모의 번호리턴
+		if (parents[a] < 0) return a;	// 부모 노드라면 해당 노드의 번호리턴
 		return parents[a] = findSet(parents[a]);
 	}
 	
