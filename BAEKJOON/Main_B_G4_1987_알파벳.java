@@ -3,6 +3,7 @@
  * 964ms
  * 30m
  * dfs로 풀기
+ * 방문관리 'A'-65 ~ 'Z'-65
  */
 package BAEKJOON;
 
@@ -16,7 +17,7 @@ public class Main_B_G4_1987_알파벳 {
 	static int[][] dh = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 	static int R, C;
 	static int max = 1;
-	static boolean[] visited = new boolean[26]; // 'A'-65 ~ 'Z' - 65
+	static boolean[] visited = new boolean[26]; // 'A'-65 ~ 'Z'-65
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
