@@ -1,7 +1,7 @@
 /*
  * 12416KB
  * 964ms
- * 30m
+ * 20m
  * dfs로 풀기
  * 방문관리 'A'-65 ~ 'Z'-65
  */
@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_B_G4_1987_알파벳 {
+public class Main_B_G4_1987_알파벳_정세린 {
 	static char[][] map;
 	static int[][] dh = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 	static int R, C;
