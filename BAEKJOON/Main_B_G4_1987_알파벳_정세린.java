@@ -28,7 +28,7 @@ public class Main_B_G4_1987_알파벳_정세린 {
 		
 		for (int i = 0; i < R; i++) {
 			map[i] = br.readLine().toCharArray();
-		}
+		} // end of input
 		
 		dfs(0, 0, 1);
 		
