@@ -38,7 +38,6 @@ public class Main_B_G5_1107_리모컨_정세린 {
 			return;
 		}
 		
-		
 		// 0 ~
 		int min = Integer.MAX_VALUE;
 		for (int i = 0; i <= 1000000; i++) {
@@ -49,9 +48,7 @@ public class Main_B_G5_1107_리모컨_정세린 {
 			cnt += makeChannel(i);
 			min = Integer.min(min, cnt);
 		}
-		
 		min = Integer.min(min, Math.abs(N - 100)); // 현재위치에서 단순 버튼 누르기와 비교
-		
 		System.out.println(min);
 		
 	} // end of main
@@ -63,7 +60,6 @@ public class Main_B_G5_1107_리모컨_정세린 {
 		while(cnt++ < digitNum) {
 			int tmp = num % 10; // 각 자리수
 			if (isbreak[tmp]) return -1; // 고장난 버튼이면
-			
 			num = num / 10;
 		}
 		return digitNum; // 만들 수 있음
