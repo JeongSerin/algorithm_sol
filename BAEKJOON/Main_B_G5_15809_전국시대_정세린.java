@@ -1,6 +1,6 @@
 /*
- * 51472KB
- * 1140ms
+ * 47676KB
+ * 644ms
  * 40m
  * union-find
  * 합칠때 병력도 같이 합침.
@@ -42,8 +42,8 @@ public class Main_B_G5_15809_전국시대_정세린 {
 			}
 			
 			if (O == 2) { // 전쟁일때
-				int sizeP = A[findSet(P)]; // P의 규모
-				int sizeQ = A[findSet(Q)]; // Q의 규모
+				int sizeP = A[findSet(P)]; // P의 병력
+				int sizeQ = A[findSet(Q)]; // Q의 병력
 				if (sizeP > sizeQ) { // P가 승리국
 					unionSet(P, Q, O);
 				}else { // Q가 승리국 또는 무승부
@@ -62,10 +62,9 @@ public class Main_B_G5_15809_전국시대_정세린 {
 		Collections.sort(arrA); // 오름차순
 		
 		System.out.println(cnt);
-		for (int i = 0; i < arrA.size(); i++) 
-			System.out.print(arrA.get(i) + " ");
-		// end of ouput
-		
+		String str = arrA.toString().replace(", ", " ");
+		System.out.println(str.substring(1, str.length() - 1));
+
 	} // end of main
 	
 	static void makeSet(int n) {
@@ -79,14 +78,12 @@ public class Main_B_G5_15809_전국시대_정세린 {
 	}
 	
 	// 합치기(동맹 또는 진 나라가 들어감)
-	static boolean unionSet(int win, int lose, int O) {
+	static void unionSet(int win, int lose, int O) {
 		int winRoot = findSet(win);
 		int loseRoot = findSet(lose);
-		if (winRoot == loseRoot) return false;
 		// union
 		parents[loseRoot] = winRoot;
-		// 병력 합치기
-		// 동맹이면 둘이 그냥 합침
+		// 동맹이면 둘이 병력 합침
 		if (O == 1) {
 			A[winRoot] = A[winRoot] + A[loseRoot]; // 병력 합치기
 			A[loseRoot] = 0;
@@ -97,7 +94,6 @@ public class Main_B_G5_15809_전국시대_정세린 {
 			A[winRoot] = A[winRoot] - A[loseRoot];
 			A[loseRoot] = 0;
 		}
-		return true;
 	}
 
 }
