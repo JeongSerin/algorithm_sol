@@ -31,11 +31,11 @@ public class Solution_P_L2_1829_카카오프렌즈컬러링북 {
 			for (int i = 0; i < m; i++){
 				for (int j = 0; j < n; j++){
 					int color = map[i][j]; // 그림의 색
-				    if (visited[i][j] || color == 0) continue; // 이미 방문했거나 빈공간일경우 pass
-				    sizeCnt = 0;
-				    dfs(i, j, color);
-				    maxSizeOfOneArea = Integer.max(maxSizeOfOneArea,sizeCnt); // 영역 사이즈 최대값 비교
-				    numberOfArea++; // 영역의 개수+
+					if (visited[i][j] || color == 0) continue; // 이미 방문했거나 빈공간일경우 pass
+					sizeCnt = 0;
+					dfs(i, j, color);
+					maxSizeOfOneArea = Integer.max(maxSizeOfOneArea,sizeCnt); // 영역 사이즈 최대값 비교
+					numberOfArea++; // 영역의 개수+
 				}
 			}
 		    answer[0] = numberOfArea;
@@ -64,7 +64,7 @@ public class Solution_P_L2_1829_카카오프렌즈컬러링북 {
 		int m = 6;
 		int n = 4;
 		int[][] picture = {{1, 1, 1, 0}, {1, 2, 2, 0}, {1, 0, 0, 1}, {0, 0, 0, 1}, {0, 0, 0, 3}, {0, 0, 0, 3}}; // [4, 5]
-	//		int[][] picture = {{1, 1, 1, 0}, {1, 1, 1, 0}, {0, 0, 0, 1}, {0, 0, 0, 1}, {0, 0, 0, 1}, {0, 0, 0, 1}}; // [2, 6]
+//		int[][] picture = {{1, 1, 1, 0}, {1, 1, 1, 0}, {0, 0, 0, 1}, {0, 0, 0, 1}, {0, 0, 0, 1}, {0, 0, 0, 1}}; // [2, 6]
 		int[] answer = s.solution(m, n, picture);
 
 		System.out.println(Arrays.toString(answer));
