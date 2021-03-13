@@ -8,7 +8,6 @@ package PROGRAMMERS;
 import java.util.Arrays;
 
 public class Solution_P_L2_1829_카카오프렌즈컬러링북 {
-
 	static class Solution {
 	    int M, N;
 	    int[][] map;
