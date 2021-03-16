@@ -1,4 +1,9 @@
 /*
+테스트 28 〉	통과 (329.58ms, 171MB)
+테스트 29 〉	통과 (318.99ms, 168MB)
+테스트 30 〉	통과 (249.44ms, 155MB)
+테스트 31 〉	통과 (257.24ms, 157MB)
+테스트 32 〉	통과 (219.98ms, 144MB)
  * 40m
  * HashMap으로 유저정보 업데이트
  */
@@ -8,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class Solution_P_L2_42888_오픈채팅방 {
+public class Solution_P_L2_42888_오픈채팅방_정세린 {
 	static class Solution {
 		public String[] solution(String[] record) {
 			String[] answer = {};
