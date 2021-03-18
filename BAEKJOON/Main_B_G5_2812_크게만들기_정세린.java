@@ -51,8 +51,7 @@ public class Main_B_G5_2812_크게만들기_정세린 {
 		
 		// 스택에 있는 숫자 + 아직 스택에 푸시되지 않은 숫자들
 		String ans = s.toString();
-		ans = ans.substring(1, ans.length() - 1).replace(", ", ""); // 스택에 있는 숫자 나열
-		ans = ans + number.substring(index); // 아직 푸시되지 않은 숫자들
+		ans = ans.substring(1, ans.length() - 1).replace(", ", "") + number.substring(index); // 스택에 있는 숫자 나열
 		System.out.println(ans);
 	} // end of main
 
