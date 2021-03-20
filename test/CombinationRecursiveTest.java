@@ -19,7 +19,7 @@ public class CombinationRecursiveTest {
 		N = sc.nextInt();
 		R = sc.nextInt();
 		
-		combArr = new int[3];
+		combArr = new int[R];
 		
 		combination(0, N, R);
 		System.out.println("cnt = " + cnt);
