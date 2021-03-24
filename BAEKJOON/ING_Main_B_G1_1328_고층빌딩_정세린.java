@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_B_G1_1328_고층빌딩_정세린 {
+public class ING_Main_B_G1_1328_고층빌딩_정세린 {
 	static int test,K,Kvalue[],sumDist[],dp[][],min;
 	//dp[i][j] = i부터 j까지를 더하는  최소값
 	//dp[i][i] = Kvalue[i]
