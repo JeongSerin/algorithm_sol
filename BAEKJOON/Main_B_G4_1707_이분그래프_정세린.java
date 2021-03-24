@@ -62,7 +62,7 @@ public class Main_B_G4_1707_이분그래프_정세린 {
 	static void dfs(int from) {
 		if (flag) return;
 		
-		for (Integer to: abj.get(from)) {
+		for (int to: abj.get(from)) {
 			if (color[to] == 0) {
 				color[to] = color[from] * -1;
 				dfs(to);
