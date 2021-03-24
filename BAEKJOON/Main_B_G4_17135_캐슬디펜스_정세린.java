@@ -118,7 +118,6 @@ public class Main_B_G4_17135_캐슬디펜스_정세린 {
 		} // end of while
 		
 		max = Math.max(max, cnt);
-		
 	} // end of attack()
 	
 }
