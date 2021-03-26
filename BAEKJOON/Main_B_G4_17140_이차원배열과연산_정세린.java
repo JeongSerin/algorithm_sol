@@ -2,7 +2,7 @@
  * 15424KB
  * 172ms
  * 1H 40m
- * HashMap으로 개수 센 뒤 정렬
+ * HashMap으로 숫자의 등장횟수 센 뒤 정렬
  */
 package BAEKJOON;
 
