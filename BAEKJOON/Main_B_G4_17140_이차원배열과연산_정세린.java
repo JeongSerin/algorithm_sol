@@ -111,6 +111,7 @@ public class Main_B_G4_17140_이차원배열과연산_정세린 {
 		}
 	} // C연산
 	
+	// 키셋 정렬
 	static Integer[] sortMap() {
 		Integer[] keys = map.keySet().toArray(new Integer[map.size()]); // 숫자셋
 		Arrays.sort(keys, new Comparator<Integer>() {
@@ -122,7 +123,6 @@ public class Main_B_G4_17140_이차원배열과연산_정세린 {
 				return appearTmp; // 1순위정렬 등장횟수
 			}
 		});
-		
 		return keys;
 	}
 	
