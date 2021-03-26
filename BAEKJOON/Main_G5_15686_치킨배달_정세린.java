@@ -94,5 +94,4 @@ public class Main_G5_15686_치킨배달_정세린 {
 		min = Integer.min(min, sum);
 	} // end of getDistance
 	
-	
 }
