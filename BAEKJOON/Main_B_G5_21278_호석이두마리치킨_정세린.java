@@ -27,7 +27,7 @@ public class Main_B_G5_21278_호석이두마리치킨_정세린 {
 		M = Integer.parseInt(st.nextToken()); // 도로의 개수
 		dist = new int[N + 1][N + 1]; 
 		for (int i = 0; i <= N; i++) Arrays.fill(dist[i], INF);
-		
+
 		for (int i = 0; i < M; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
 			int a = Integer.parseInt(st.nextToken());
@@ -62,6 +62,7 @@ public class Main_B_G5_21278_호석이두마리치킨_정세린 {
 			selected[r - 1] = i;
 			combination(i + 1, n, r - 1);
 		}
+		
 	} // end of combination
 	
 	static void getMinDist() {
