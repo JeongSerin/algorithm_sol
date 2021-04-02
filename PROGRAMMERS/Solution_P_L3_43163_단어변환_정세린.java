@@ -9,7 +9,7 @@ dfs,
  */
 package PROGRAMMERS;
 
-public class Solution_P_L2_43163_단어변환_정세린 {
+public class Solution_P_L3_43163_단어변환_정세린 {
 
 	static class Solution {
 		String[] wordsCopy;
