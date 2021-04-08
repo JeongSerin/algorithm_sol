@@ -57,7 +57,7 @@ public class Solution_P_L2_17686_파일명정렬_정세린 {
 						headDone = true; // 헤드 입력이 끝남
 					}
 				}
-				pq.offer(new FileInfo(i, files[i], head.toLowerCase(), Integer.parseInt(number)));
+				pq.offer(new FileInfo(i, files[i], head.toLowerCase(), Integer.parseInt(number))); // 대소문자 구분x -> head소문자로 통일
 			} // end of input
 
 			for (int i = 0; i < len; i++) {
