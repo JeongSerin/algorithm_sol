@@ -10,7 +10,7 @@ package PROGRAMMERS;
 
 import java.util.LinkedList;
 
-public class Solution_L2_67257_수식최대화_정세린 {
+public class Solution_P_L2_67257_수식최대화_정세린 {
 
 	static class Solution {
 		char[] op = { '+', '-', '*' };
