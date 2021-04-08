@@ -4,7 +4,6 @@
  * 40m
  * 조합
  */
-
 package BAEKJOON;
 
 import java.io.BufferedReader;
