@@ -71,8 +71,8 @@ public class Solution_P_L2_17686_파일명정렬_정세린 {
 
 	public static void main(String[] args) {
 		Solution s = new Solution();
-		String[] files = {"img12.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG"};
-//		String[] files = {"F-5 Freedom Fighter", "B-50 Superfortress", "A-10 Thunderbolt II", "F-14 Tomcat"};
+//		String[] files = {"img12.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG"};
+		String[] files = {"F-5 Freedom Fighter", "B-50 Superfortress", "A-10 Thunderbolt II", "F-14 Tomcat"};
 		String[] ans = s.solution(files);
 		System.out.println(Arrays.toString(ans));
 	}
