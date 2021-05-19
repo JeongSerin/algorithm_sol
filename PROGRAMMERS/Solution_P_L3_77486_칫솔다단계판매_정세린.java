@@ -11,7 +11,7 @@ package PROGRAMMERS;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class ING_Solution_P_L3_77486_칫솔다단계판매_정세린 {
+public class Solution_P_L3_77486_칫솔다단계판매_정세린 {
 
 	static class Solution {
 		public int[] solution(String[] enroll, String[] referral, String[] seller, int[] amount) {
