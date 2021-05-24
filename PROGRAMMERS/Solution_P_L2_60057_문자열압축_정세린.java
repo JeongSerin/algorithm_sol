@@ -14,7 +14,7 @@ public class Solution_P_L2_60057_문자열압축_정세린 {
 		public int solution(String s) {
 			int total = s.length();
 			int answer = total; // 최소길이
-
+			
 			for (int len = 1; len < s.length(); len++) {
 				int complen = total; // 압축된 문자열 길이
 				for (int i = 0; i < s.length() - len; i += len) {
