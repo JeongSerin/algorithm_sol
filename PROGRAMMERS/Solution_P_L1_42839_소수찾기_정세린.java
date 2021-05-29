@@ -1,9 +1,16 @@
 /*
-테스트 8 〉	통과 (11.69ms, 54.2MB)
-테스트 9 〉	통과 (0.15ms, 52.3MB)
-테스트 10 〉	통과 (11.74ms, 52.8MB)
-테스트 11 〉	통과 (1.63ms, 52MB)
-테스트 12 〉	통과 (1.44ms, 52.3MB)
+테스트 1 〉	통과 (0.36ms, 52.3MB)
+테스트 2 〉	통과 (5.53ms, 53MB)
+테스트 3 〉	통과 (0.09ms, 52.2MB)
+테스트 4 〉	통과 (6.44ms, 52.7MB)
+테스트 5 〉	통과 (12.92ms, 53.1MB)
+테스트 6 〉	통과 (0.08ms, 52.5MB)
+테스트 7 〉	통과 (0.39ms, 51.8MB)
+테스트 8 〉	통과 (7.94ms, 53.4MB)
+테스트 9 〉	통과 (0.12ms, 52.1MB)
+테스트 10 〉	통과 (6.10ms, 53.2MB)
+테스트 11 〉	통과 (1.64ms, 52.1MB)
+테스트 12 〉	통과 (1.39ms, 51.8MB)
  * 40m
  * 순열, 소수확인
  * https://programmers.co.kr/learn/courses/30/lessons/42839?language=java
@@ -32,7 +39,11 @@ public class Solution_P_L1_42839_소수찾기_정세린 {
 				permutation(len, i);
 			}
 	
-			answer = set.size();
+			for (int num: set) {
+				if(isPrime(num)) answer++;
+			}
+			
+	//			answer = set.size();
 			return answer;
 		} // end of solution()
 	
@@ -40,13 +51,14 @@ public class Solution_P_L1_42839_소수찾기_정세린 {
 			if (r == 0) {
 				// 소수 확인
 				int selectedNum = Integer.parseInt(sb.toString());
-				if (isPrime(selectedNum)) set.add(selectedNum);
+				set.add(selectedNum);
+	//				if (isPrime(selectedNum)) set.add(selectedNum);
 				return;
 			}
 	
 			for (int i = 0; i < n; i++) {
-				char number = nums.charAt(i);
 				if (selected[i]) continue;
+				char number = nums.charAt(i);
 				selected[i] = true;
 				sb.append(number);
 				permutation(n, r - 1);

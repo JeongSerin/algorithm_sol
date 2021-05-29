@@ -9,7 +9,7 @@ public class P04_NextPermutationTest {
 	static int totalCnt;
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
-		N=sc.nextInt();
+		N = sc.nextInt();
 		input = new int[N];
 		for(int i = 0; i < N; ++i)
 			input[i] = sc.nextInt();
