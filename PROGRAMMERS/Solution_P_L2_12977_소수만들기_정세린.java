@@ -26,7 +26,7 @@
 테스트 25 〉	통과 (0.62ms, 51.9MB)
 테스트 26 〉	통과 (0.05ms, 51.7MB)
  * 30m
- * 에스토스테네스의체. 재귀로 조합하면 터짐.
+ * 에라토스테네스의체. 재귀로 조합하면 터짐.
  * https://programmers.co.kr/learn/courses/30/lessons/12977
  */
 package PROGRAMMERS;
