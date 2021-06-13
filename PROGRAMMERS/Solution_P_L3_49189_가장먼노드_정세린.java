@@ -26,7 +26,7 @@ public class Solution_P_L3_49189_가장먼노드_정세린 {
 		int N;
 		boolean[] visited;
 		final int INF = 1000000;
-
+	
 		public int solution(int n, int[][] edge) {
 			int answer = 0;
 			adj = new ArrayList<>();
@@ -39,40 +39,40 @@ public class Solution_P_L3_49189_가장먼노드_정세린 {
 				adj.get(e[0]).add(e[1]);
 				adj.get(e[1]).add(e[0]);
 			}
-
+	
 			dijkstra(1);
-
+	
 			for (int i = 1; i <= N; i++) {
 				if (dist[i] == max) answer++;
 			}
-
+	
 			return answer;
 		}
-
+	
 		int getSmallIdx() {
 			int min = INF;
 			int idx = 1;
-
+	
 			for (int i = 1; i <= N; i++) {
 				if (!visited[i] && dist[i] < min) {
 					min = dist[i];
 					idx = i;
 				}
 			}
-
+	
 			return idx;
 		} // end of getSmallIdx()
-
+	
 		void dijkstra(int start) {
 			visited[start] = true;
 			Arrays.fill(dist, INF);
-
+	
 			for (int i : adj.get(start)) dist[i] = 1;
-
+	
 			for (int i = 1; i <= N - 2; i++) {
 				int cur = getSmallIdx();
 				visited[cur] = true;
-
+	
 				for (int j : adj.get(cur)) {
 					if (visited[j]) continue;
 					if (dist[j] > dist[cur] + 1) {
