@@ -33,7 +33,7 @@ public class CombinationRecursiveTest {
 			return;
 		}
 		for (int i = idx; i < n; i++) {
-			combArr[R - r] = i + 1;
+			combArr[R - r] = i;
 			combination(i + 1, n, r - 1);
 		}
 	}
