@@ -18,7 +18,7 @@ public class FloydWarshall {
 							{2, INF, 0, 4},
 							{INF, INF, 3, 0}
 						};
-					
+	
 	public static void main(String[] args) {
 		floydWarshall();
 	}
