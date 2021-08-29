@@ -38,6 +38,8 @@
  */
 package PROGRAMMERS;
 
+import java.util.Arrays;
+
 public class Solution_P_L2_12985_예상대진표_정세린 {
 	static class Solution {
 		public int solution(int n, int a, int b) {
